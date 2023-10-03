@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+    <style>
+        /* Add your CSS styles here */
+        .add-user-form {
+            margin-top: 20px;
+        }
+        .add-user-input {
+            padding: 5px;
+            width: 200px;
+        }
+        .add-user-button {
+            padding: 5px 10px;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h1>Welcome to the Flask Social media Clone</h1>
+    <h2>Users:</h2>
+    
+    
+    <!-- Add User Form -->
+    <form class="add-user-form" method="POST" action="{{ url_for('create_user') }}">
+        <input class="add-user-input" type="text" id="username" name="username" placeholder="Enter username" required>
+        <button class="add-user-button" type="submit">Add User</button>
+    </form>
+</body>
+</html>
